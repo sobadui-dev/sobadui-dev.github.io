@@ -20,21 +20,24 @@ body{
 #comp-logo{
 	font-family: Courier;
 	font-weight: 300;
+	display: flex;
+
+	text-align: center;
 
 	padding: 0;
 	margin: 0;
 }
 
 #cursor{
+	font-size: 65px;
 	font-weight: 900;
-	font-size: 2em;
 }
 
 #comp-name{
 	display: inline-block;
 	vertical-align: middle;
-	font-size: 2em;
-	margin-left: -20px;
+	font-size: 65px;
+	/* margin-left: -20px; */
 }
 
 #comp-icon{
@@ -55,10 +58,10 @@ body{
 	left: 0;
 	right: 0;
 	margin: auto;
-	width: 100px;
+	width: 8em;
 	text-align: center;
 
-	font-size: 0.8rem;
+	font-size: 12px;
 
 	bottom: 10vh;
 	color: #999;
@@ -66,14 +69,25 @@ body{
 	padding: 10px 10px;
 	border: 1px solid #999;
 	border-radius: 10px;
-	flex-grow: 0;
-	flex-shrink: 0;
-	opacity: 0;
 
+
+	/* opacity: 0;
 	animation: fade-in 2s forwards;
-	animation-delay: 2s;
+	animation-delay: 2s; */
 
 	transition: all 0.5s;
+}
+
+@media only screen and (max-width: 475px){
+	#comp-logo{
+		flex-direction: column;
+		margin-top: -2em;
+	}
+
+	blink{
+		display: none;
+		animation: none;
+	}
 }
 
 blink{

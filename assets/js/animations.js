@@ -13,7 +13,9 @@ function prepareAnimations(){
 			setTimeout(addLetter, 150)
 		}else{
 			compName.textContent = nameText
-			compName.innerHTML += "<blink>|</blink>"
+
+			if (window.innerWidth > 475)
+				compName.innerHTML += "<blink>|</blink>"
 		}
 	}
 	setTimeout(addLetter, 1000)
