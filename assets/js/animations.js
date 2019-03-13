@@ -1,9 +1,8 @@
 const nameText = "SoBadUI"
 
-
 function prepareAnimations(){
 	const compName = document.getElementById('comp-name')
-	
+
 	let nameAdvance = 0
 	function addLetter(){
 
