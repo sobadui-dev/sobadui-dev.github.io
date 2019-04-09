@@ -26,6 +26,8 @@ body{
 
 	padding: 0;
 	margin: 0;
+
+	transform: rotate(-1deg);
 }
 
 #cursor{
@@ -63,7 +65,7 @@ body{
 
 	font-size: 12px;
 
-	bottom: 10vh;
+	bottom:25vh;
 	color: #999;
 	text-decoration: none;
 	padding: 10px 10px;
@@ -78,21 +80,25 @@ body{
 	transition: all 0.5s;
 }
 
+blink{
+	opacity: 0;
+	animation: blink 1s infinite;
+}
+
 @media only screen and (max-width: 475px){
 	#comp-logo{
 		flex-direction: column;
 		margin-top: -2em;
 	}
 
+	#comp-icon{
+		transition: all 1s;
+	}
+
 	blink{
 		display: none;
 		animation: none;
 	}
-}
-
-blink{
-	animation: blink 1.5s infinite;
-	margin: 0 -10px;
 }
 
 #btn-cto:hover{
@@ -107,12 +113,11 @@ blink{
     	opacity: 0;
 	}
 	49% {
-	    opacity: 0;
+	    opacity: 1;
 	}
 	50% {
 	    opacity: 1;
 	}
-
 }
 
 @keyframes fade-in{
